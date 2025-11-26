@@ -15,6 +15,7 @@ ol,ul{ list-style: none;}
     height: 640px;
     border: 1px solid #222;
     border-radius: 1rem;
+    box-shadow: 2px #222;
 }
 #categories{
     ul{

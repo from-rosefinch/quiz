@@ -23,7 +23,7 @@ const QuizPage = ({ quizes, onFinish, onScore, score }) => {
       <ul className="choices">
         {quizes[current].choices.map((item, idx) => {
           return (
-            <li key={idx} onClick={handleClick}>
+            <li key={idx} onClick={()=>{handleClick(idx)}}>
               {idx + 1}.{item}
             </li>
           );

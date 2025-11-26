@@ -1,7 +1,7 @@
 const Categories = ({categories,onSelect}) => {
   return (
     <div id="categories">
-        <h2>주제를 선택하세요</h2>
+        <h2>주제 선택하기</h2>
         <ul>
             {
                 categories.map((item,idx)=>{
