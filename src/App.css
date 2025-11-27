@@ -1,36 +1,185 @@
 @charset "utf-8";
-* { margin: 0; padding: 0;}
-a{ text-decoration: none; color: inherit;}
-ol,ul{ list-style: none;}
-#root{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* app */
-#app{
-    background-color: #fff;
-    width: 360px;
-    height: 640px;
-    border: 1px solid #222;
-    border-radius: 1rem;
-    box-shadow: 2px #222;
-}
-#categories{
-    ul{
-        li{
-            cursor: pointer;
-            margin: 0.5rem 0;
-        }
-    }
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
 }
 
-@media all and (max-width: 360px){
-    #app{
-        width: 100%;
-        height: 100%;
-        border: none;
-        border-radius: 0;
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff")
+    format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ol,
+ul {
+  list-style: none;
+}
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./images/desktop_bg.png);
+  background-size: cover;
+  font-family: "Escoredream";
+}
+/* app */
+#app {
+  background-image: url(./images/app_bg1.png);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 360px;
+  height: 640px;
+  border: 4px solid #fff;
+  border-radius: 1rem;
+  box-shadow: 6px 0 8px -4px rgba(0, 0, 0, 0.2),
+    0 6px 8px -4px rgba(0, 0, 0, 0.2);
+  /* app score */
+  p {
+    width: 20rem;
+    height: 11rem;
+    padding: 0.6rem;
+    gap: 0.625rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 2rem;
+  }
+}
+h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+h2 {
+  font-size: 1rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 1rem; */
+}
+#categories {
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    margin: 0;
+    gap: 0.5rem;
+
+    li {
+      cursor: pointer;
+      margin: 0.5rem 0;
+      border-radius: 2rem;
+      padding: 10px;
+      width: 190px;
+      height: 35px;
+      background-color: #fff;
+      color: #ff9ec5;
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.3),
+        /* 안쪽 하이라이트 */ 0 8px 20px rgba(255, 158, 197, 0.5); /* 외부 그림자 */
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: filter 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        color: #ff71aa;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
     }
+  }
+}
+
+#quiz-page {
+  /* 퀴즈번호 */
+  h3 {
+  }
+  /* 퀴즈문제 */
+  p {
+    display: flex;
+    width: 20.375rem;
+    height: 11.3125rem;
+    padding: 0.625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 3rem;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  /* 4문항 */
+  .choices {
+    li {
+      display: flex;
+      width: 19.75rem;
+      height: 3.25rem;
+      padding: 0.5rem 0.6rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      border-radius: 2rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      font-weight: 600;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+#result {
+  p {
+  }
+  button {
+  }
+}
+@media all and (max-width: 360px) {
+  #app {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+  }
 }

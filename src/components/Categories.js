@@ -1,3 +1,4 @@
+//첫 메인화면
 const Categories = ({categories,onSelect}) => {
   return (
     <div id="categories">

@@ -1,3 +1,4 @@
+//퀴즈화면
 import { useState } from "react";
 
 const QuizPage = ({ quizes, onFinish, onScore, score }) => {
@@ -29,7 +30,7 @@ const QuizPage = ({ quizes, onFinish, onScore, score }) => {
           );
         })}
       </ul>
-      <p>Child Score : {score}</p>
+      {/* <p>Child Score : {score}</p> */}
     </div>
   );
 };

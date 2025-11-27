@@ -31,7 +31,7 @@ const App = () => {
   };
   return (
     <div id="app">
-      <h1>퀴즈</h1>
+      <h1>“Design Sense in Bloom”</h1>
       {!category && !finish && (
         <Categories
           categories={quizData.categories}
@@ -46,7 +46,7 @@ const App = () => {
           score={score}
         />
       )}
-      <p>APP SCORE : {score}</p>
+      {/* <p>APP SCORE<br/>{score}</p> */}
       {finish && <Results onReStart={handleReStart} />}
     </div>
   );
