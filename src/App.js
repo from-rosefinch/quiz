@@ -43,7 +43,6 @@ const App = () => {
           quizes={filterQuiz}
           onFinish={setFinish}
           onScore={handleScore}
-          
         />
       )}
       {/* <p>APP SCORE<br/>{score}</p> */}
