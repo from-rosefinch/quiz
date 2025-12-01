@@ -65,7 +65,7 @@ ul {
   box-shadow: 6px 0 8px -4px rgba(0, 0, 0, 0.2),
     0 6px 8px -4px rgba(0, 0, 0, 0.2);
   /* app score */
-  p {
+  div.quiz-end {
     width: 20rem;
     height: 11rem;
     padding: 0.6rem;
@@ -132,36 +132,65 @@ h2 {
 }
 
 #quiz-page {
-  /* 퀴즈번호 */
-  h3 {
-  }
-  /* 퀴즈문제 */
-  p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  .qustion {
     display: flex;
-    width: 20.375rem;
-    height: 11.3125rem;
-    padding: 0.625rem;
+    width: 20rem;
+    height: 11rem;
+    padding: 0.6rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.625rem;
     border-radius: 3rem;
     background-color: rgba(255, 255, 255, 0.4);
+
+    /* 퀴즈번호 */
+    h3 {
+      font-size: 1.7rem;
+      margin-top: 1.5rem;
+      color: #ff71aa;
+    }
+    
+    /* 퀴즈문제 */
+    p.q-text {
+      width: 20rem;
+      height: 9rem;
+      padding: 1rem;
+      color: #ff71aa;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+
+      /* border-radius: 3rem; */
+      /* background-color: rgba(255, 255, 255, 0.4); */
+    }
   }
+
   /* 4문항 */
   .choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
     li {
       display: flex;
-      width: 19.75rem;
-      height: 3.25rem;
-      padding: 0.5rem 0.6rem;
+      width: 20rem;
+      height: 4rem;
+      /* padding: 0.5rem 0.6rem; */
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 0.625rem;
+      gap: 0.6rem;
       border-radius: 2rem;
       background-color: rgba(255, 255, 255, 0.3);
       font-weight: 600;
+      font-size: 1.2rem;
+      color: #ff71aa;
       &:hover {
         background-color: #fff;
       }
@@ -170,11 +199,39 @@ h2 {
 }
 
 #result {
-  p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .quiz-end {
+    p {
+      color: #ff9ec5;
+      font-weight: 600;
+    }
+    h2 {
+      color: #ff71aa;
+      font-size: 3rem;
+    }
   }
   button {
+    border: none;
+    outline: none;
+    margin: 1rem auto;
+    width: 11rem;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    gap: 0.625rem;
+    border-radius: 3.125rem;
+    background: rgba(255, 255, 255, 0.5);
+    color: #ff9ec5;
+    font-weight: 800;
+    font-size: 1rem;
+    &:hover {
+      background-color: #fff;
+    }
   }
 }
+
 @media all and (max-width: 360px) {
   #app {
     width: 100%;

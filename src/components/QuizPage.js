@@ -17,20 +17,24 @@ const QuizPage = ({ quizes, onFinish, onScore, score }) => {
   };
   return (
     <div id="quiz-page">
-      <h3>
-        퀴즈 ({current + 1}/{quizes.length})
-      </h3>
-      <p>{quizes[current].question}</p>
+      <div class="qustion">
+        <h3>Q{current + 1}</h3>
+        <p class="q-text">{quizes[current].question}</p>
+      </div>
       <ul className="choices">
         {quizes[current].choices.map((item, idx) => {
           return (
-            <li key={idx} onClick={()=>{handleClick(idx)}}>
-              {idx + 1}.{item}
+            <li
+              key={idx}
+              onClick={() => {
+                handleClick(idx);
+              }}
+            >
+              {item}
             </li>
           );
         })}
       </ul>
-      {/* <p>Child Score : {score}</p> */}
     </div>
   );
 };

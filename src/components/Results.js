@@ -1,7 +1,10 @@
-const Results = ({onReStart}) => {
+const Results = ({onReStart,score}) => {
   return (
     <div id="result">
-      <p>퀴즈 종료</p>
+      <div className="quiz-end">
+        <p>점수</p>
+        <h2>{score}점</h2>
+        </div>
       <button onClick={onReStart}>다시시작</button>
     </div>
   )

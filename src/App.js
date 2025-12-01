@@ -43,11 +43,11 @@ const App = () => {
           quizes={filterQuiz}
           onFinish={setFinish}
           onScore={handleScore}
-          score={score}
+          
         />
       )}
       {/* <p>APP SCORE<br/>{score}</p> */}
-      {finish && <Results onReStart={handleReStart} />}
+      {finish && <Results onReStart={handleReStart} score={score}/>}
     </div>
   );
 };
