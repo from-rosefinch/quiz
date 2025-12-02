@@ -5,7 +5,7 @@ const Results = ({onReStart,score}) => {
         <p>점수</p>
         <h2>{score}점</h2>
         </div>
-      <button onClick={onReStart}>다시시작</button>
+      <button onClick={onReStart}>처음으로</button>
     </div>
   )
 }

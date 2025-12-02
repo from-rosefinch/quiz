@@ -1,6 +1,30 @@
 @charset "utf-8";
 @font-face {
   font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff")
+    format("woff");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff")
     format("woff");
   font-weight: normal;
@@ -28,6 +52,22 @@
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff")
     format("woff");
   font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff")
+    format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff")
+    format("woff");
+  font-weight: 900;
   font-display: swap;
 }
 
@@ -66,13 +106,23 @@ ul {
     0 6px 8px -4px rgba(0, 0, 0, 0.2);
   /* app score */
   div.quiz-end {
-    width: 20rem;
+    width: 19rem;
     height: 11rem;
     padding: 0.6rem;
-    gap: 0.625rem;
+    gap: 0.6rem;
     text-align: center;
-    background-color: #fff;
+    background: linear-gradient(
+      182deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    backdrop-filter: blur(22px) saturate(180%);
+    /* -webkit-backdrop-filter: blur(22px) saturate(180%);
+  --light-angle: 180deg; */
     border-radius: 2rem;
+    border: 1px solid #fff;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7),
+      inset 0 -1px 3px rgba(255, 255, 255, 0.15), 0 4px 14px rgba(0, 0, 0, 0.08);
   }
 }
 h1 {
@@ -146,8 +196,12 @@ h2 {
     justify-content: center;
     align-items: center;
     border-radius: 3rem;
-    background-color: rgba(255, 255, 255, 0.4);
-
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(28px) saturate(150%);
+    -webkit-backdrop-filter: blur(28px) saturate(150%);
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7),
+      /* 윗면 하이라이트 */ inset 0 -1px 3px rgba(255, 255, 255, 0.15),
+      /* 아랫면 은은한 입체 */ 0 4px 14px rgba(0, 0, 0, 0.08); /* 외부 그림자 */
     /* 퀴즈번호 */
     h3 {
       font-size: 1.7rem;
@@ -175,19 +229,26 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.7rem;
+    gap: 0.8rem;
     li {
       display: flex;
       width: 20rem;
-      height: 4rem;
+      height: 3.9rem;
       /* padding: 0.5rem 0.6rem; */
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 0.6rem;
       border-radius: 2rem;
-      border: #fff solid 1px;
-      background-color: rgba(255, 255, 255, 0.4);
+      border: #fff solid 0.5px;
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(28px) saturate(150%);
+      -webkit-backdrop-filter: blur(28px) saturate(150%);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.7),
+        /* 윗면 하이라이트 */ inset 0 -1px 3px rgba(255, 255, 255, 0.15),
+        /* 아랫면 은은한 입체 */ 0 4px 14px rgba(0, 0, 0, 0.08); /* 외부 그림자 */
+      cursor: pointer;
+      transition: 0.25s ease;
       font-weight: 600;
       font-size: 1.2rem;
       color: #ff71aa;
@@ -210,9 +271,11 @@ h2 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: ;
     p {
       color: #ff9ec5;
       font-weight: 600;
+      font-size: 1.5rem;
     }
     h2 {
       color: #ff71aa;
@@ -220,20 +283,31 @@ h2 {
     }
   }
   button {
-    border: none;
-    outline: none;
+    all: unset;
     margin: 1rem;
-    width: 11rem;
-    height: 3rem;
-    padding: 0.5rem 1rem;
-    gap: 0.625rem;
-    border-radius: 3.125rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 9.5rem;
+    height: 2.1rem;
+    padding: 0.4rem 0.8rem;
+    gap: 0.4rem;
+    border-radius: 2rem;
+    border: #fff solid 0.5px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(28px) saturate(150%);
+    -webkit-backdrop-filter: blur(28px) saturate(150%);
+    box-shadow:
+      inset 0 1px 2px rgba(255, 255, 255, 0.7), /* 윗면 하이라이트 */
+      inset 0 -1px 3px rgba(255, 255, 255, 0.15), /* 아랫면 은은한 입체 */
+      0 4px 14px rgba(0, 0, 0, 0.08);  /* 외부 그림자 */
+    cursor: pointer;
+    transition: 0.25s ease;
+    --light-angle: 45deg;
     border: 1px solid #fff;
     color: #ff9ec5;
-    font-weight: 900;
+    text-align: center;
+    font-weight: 600;
     font-size: 1rem;
     &:hover {
+      color: #ff71aa;
       background-color: #fff;
       border: 1px solid #fff;
     }
