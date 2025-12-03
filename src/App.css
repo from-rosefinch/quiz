@@ -90,6 +90,7 @@ ul {
   align-items: center;
   background-image: url(./images/desktop_bg.png);
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Escoredream";
 }
 /* app */
